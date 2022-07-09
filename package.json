@@ -10,7 +10,6 @@
   "proxy": "http://nyx.vima.ekt.gr:3000/api/books",
   "main": "index.js",
   "scripts": {
-    "install": "npm install --legacy-peer-deps",
     "predeploy": "yarn run build",
     "test": "jest --env=jsdom",
     "start": "webpack-dev-server --mode development --hot --progress --color --port 3000 --open",
