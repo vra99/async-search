@@ -46,7 +46,7 @@ const App: FC = () => {
   }, []);
 
   const NoResults = () =>
-    hasSearched && !books ? (
+    hasSearched && !books.length ? (
       <div>
         <Title>No results found</Title>
       </div>
@@ -64,7 +64,7 @@ const App: FC = () => {
           {loading ? (
             [...Array(5)]?.map((_, i) => <Loader key={i} />)
           ) : (
-            <div>{books ? books.map((book: IBook) => <Book key={book.workid} book={book} />) : <NoResults />}</div>
+            <div>{books.length ? books.map((book: IBook) => <Book key={book.workid} book={book} />) : <NoResults />}</div>
           )}
         </Dropdown>
       </Header>
