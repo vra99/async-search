@@ -15,6 +15,7 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@types/jest": "^24.0.0",
     "@babel/core": "^7.7.7",
     "@types/classnames": "^2.2.9",
     "@types/history": "^4.7.3",
