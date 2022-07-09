@@ -22,7 +22,7 @@ const App: FC = () => {
             signal: abortController.signal
           });
           const { work } = await response.json();
-            work ? setBooks([...work]) : setBooks([]);
+          work ? setBooks([...work]) : setBooks([]);
           setLoading(false);
         } catch (error) {
           setLoading(false);
@@ -64,9 +64,7 @@ const App: FC = () => {
           {loading ? (
             [...Array(5)]?.map((_, i) => <Loader key={i} />)
           ) : (
-            <div>
-              {books ? books.map((book: IBook) => <Book key={book.workid} book={book} />) : <NoResults />}
-            </div>
+            <div>{books ? books.map((book: IBook) => <Book key={book.workid} book={book} />) : <NoResults />}</div>
           )}
         </Dropdown>
       </Header>
@@ -77,12 +75,12 @@ const App: FC = () => {
 export default App;
 
 const Title = styled.h3`
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 0;
-    color: #333;
-    text-transform: uppercase;
-    margin-top: 1rem;
-`
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+  text-transform: uppercase;
+  margin-top: 1rem;
+`;
 
 App.displayName = 'App';
